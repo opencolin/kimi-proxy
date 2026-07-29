@@ -1,16 +1,15 @@
-# Claude Code & Codex Proxy for Nebius
+# kimi-proxy
 
-> **kimi-proxy.** This repository is a full-history port of
-> [opencolin/claude-codex-nebius-proxy](https://github.com/opencolin/claude-codex-nebius-proxy),
-> being rebranded Kimi-first: the batteries-included Claude Code + Codex →
-> Nebius proxy with the observability dashboard, ensemble racing, and
-> statusline. Its sibling [opencolin/kimi-relay](https://github.com/opencolin/kimi-relay)
-> (fork of nebius-tf-relay) is the lightweight launcher product
-> (`klaude` / `kodex` / `openkode` + Tenki sandboxing); the shared roadmap
-> lives in [kimi-relay's `docs/ROADMAP.md`](https://github.com/opencolin/kimi-relay/blob/main/docs/ROADMAP.md).
-> Until the rebrand lands, everything below documents the ported behavior.
+Run Claude Code and Codex on **Kimi K3** via Nebius Token Factory (EU hosting), batteries included: observability dashboard, ensemble racing, statusline, request optimizations, and Tavily web search.
 
-A Claude Code + Codex CLI → Nebius bridge. Accepts Claude `/v1/messages` and Codex `/v1/responses` requests, converts them to OpenAI-compatible calls, and converts responses back.
+A Claude Code + Codex CLI → Nebius bridge. Accepts Claude `/v1/messages` and Codex `/v1/responses` requests, converts them to OpenAI-compatible calls, and converts responses back. Defaults to `moonshotai/Kimi-K3` for text and `moonshotai/Kimi-K2.6` for vision; any Nebius-hosted model works.
+
+> **Provenance.** Full-history port of
+> [opencolin/claude-codex-nebius-proxy](https://github.com/opencolin/claude-codex-nebius-proxy).
+> Its sibling [opencolin/kimi-relay](https://github.com/opencolin/kimi-relay) is the
+> lightweight `klaude` / `kodex` / `openkode` launcher; the shared roadmap lives in
+> [kimi-relay's `docs/ROADMAP.md`](https://github.com/opencolin/kimi-relay/blob/main/docs/ROADMAP.md)
+> and planning PR [opencolin/claude-codex-nebius-proxy#1](https://github.com/opencolin/claude-codex-nebius-proxy/pull/1).
 
 ## Quick Start (the easy way)
 
@@ -56,7 +55,7 @@ If you prefer not to use the TUI:
 
 ```bash
 # 1. Clone and enter directory
-cd claude-codex-nebius-proxy
+cd kimi-proxy
 
 # 2. Create venv & install deps
 python3 -m venv .venv
@@ -82,7 +81,7 @@ Open http://localhost:8083/dashboard for usage, latency, cost, and model routing
 To route Codex CLI through the proxy, edit `~/.codex/config.toml` (macOS) or `%APPDATA%\codex\config.toml` (Windows):
 
 ```toml
-model = "nebius/moonshotai/Kimi-K2.6"
+model = "nebius/moonshotai/Kimi-K3"
 model_provider = "nebius"
 
 [model_providers.nebius]

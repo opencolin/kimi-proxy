@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "claude-codex-nebius-proxy-nebius"
+name = "kimi-proxy"
 version = "1.0.0"
-description = "Specialized proxy server enabling Claude Code to work with Nebius token factory API"
+description = "Run Claude Code and Codex on Kimi K3 via Nebius Token Factory, batteries included"
 readme = "README.md"
 authors = [
     {name = "Claude Code Proxy - Nebius Edition", email = "noreply@example.com"}
@@ -45,12 +45,12 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/KiranChilledOut/claude-codex-nebius-proxy"
-Repository = "https://github.com/KiranChilledOut/claude-codex-nebius-proxy.git"
-Issues = "https://github.com/KiranChilledOut/claude-codex-nebius-proxy/issues"
+Homepage = "https://github.com/opencolin/kimi-proxy"
+Repository = "https://github.com/opencolin/kimi-proxy.git"
+Issues = "https://github.com/opencolin/kimi-proxy/issues"
 
 [project.scripts]
-claude-codex-nebius-proxy-nebius = "src.main:main"
+kimi-proxy = "src.main:main"
 
 [dependency-groups]
 dev = [

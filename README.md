@@ -1,5 +1,15 @@
 # Claude Code & Codex Proxy for Nebius
 
+> **kimi-proxy.** This repository is a full-history port of
+> [opencolin/claude-codex-nebius-proxy](https://github.com/opencolin/claude-codex-nebius-proxy),
+> being rebranded Kimi-first: the batteries-included Claude Code + Codex →
+> Nebius proxy with the observability dashboard, ensemble racing, and
+> statusline. Its sibling [opencolin/kimi-relay](https://github.com/opencolin/kimi-relay)
+> (fork of nebius-tf-relay) is the lightweight launcher product
+> (`klaude` / `kodex` / `openkode` + Tenki sandboxing); the shared roadmap
+> lives in [kimi-relay's `docs/ROADMAP.md`](https://github.com/opencolin/kimi-relay/blob/main/docs/ROADMAP.md).
+> Until the rebrand lands, everything below documents the ported behavior.
+
 A Claude Code + Codex CLI → Nebius bridge. Accepts Claude `/v1/messages` and Codex `/v1/responses` requests, converts them to OpenAI-compatible calls, and converts responses back.
 
 ## Quick Start (the easy way)

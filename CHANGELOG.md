@@ -185,7 +185,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `zai-org/GLM-5.2` `.env.example` values. `.env.example` context limits set
   to 262144 for both, and `MODEL_PRICES_JSON` gains a Kimi-K3 entry
   ($3.00/$15.00 per 1M input/output, per the Nebius catalog). The Codex model
-  fallback and `docs/ARCHITECTURE.md` example follow the same ids.
+  fallback and `docs/ARCHITECTURE.md` example follow the same ids. The TUI
+  installer's model auto-picks (`pick_default_models`) prefer the same
+  Kimi-first order, falling back to the previous candidates when K3 is
+  absent from the live catalog.
 - `.env.example` default `LOG_LEVEL` changed from `INFO` to `WARNING` with expanded documentation describing the four modes (`DEBUG` / `INFO` / `WARNING` / `ERROR`).
 - Replaced deprecated `[tool.uv.dev-dependencies]` in `pyproject.toml` with the standard `[dependency-groups.dev]` section. Eliminates the UV deprecation warning during package builds.
 - Added `refusal`, `pause_turn`, and `model_context_window_exceeded` stop-reason

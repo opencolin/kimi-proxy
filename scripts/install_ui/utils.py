@@ -355,27 +355,30 @@ def pick_default_models(available: list[str]) -> dict[str, str]:
 
     return {
         "BIG_MODEL": pick([
+            "moonshotai/Kimi-K3",
+            "moonshotai/Kimi-K2.6",
             "deepseek-ai/DeepSeek-V4-Pro",
             "Qwen/Qwen3-235B-A22B-Instruct-2507",
             "meta-llama/Llama-3.3-70B-Instruct",
-            "moonshotai/Kimi-K2.6",
         ]),
         "MIDDLE_MODEL": pick([
+            "moonshotai/Kimi-K3",
+            "moonshotai/Kimi-K2.6",
             "deepseek-ai/DeepSeek-V3.2",
             "Qwen/Qwen3-235B-A22B-Instruct-2507",
             "meta-llama/Llama-3.3-70B-Instruct",
-            "moonshotai/Kimi-K2.6",
         ]),
         "SMALL_MODEL": pick([
+            "moonshotai/Kimi-K3",
             "deepseek-ai/DeepSeek-V3.2",
             "Qwen/Qwen3-32B",
             "meta-llama/Llama-3.3-70B-Instruct",
             "moonshotai/Kimi-K2.6",
         ]),
         "VISION_MODEL": pick([
+            "moonshotai/Kimi-K2.6",
             "Qwen/Qwen2.5-VL-72B-Instruct",
             "Qwen/Qwen3-235B-A22B-Instruct-2507",
-            "moonshotai/Kimi-K2.6",
         ]),
     }
 

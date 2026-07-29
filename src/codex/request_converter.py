@@ -205,8 +205,8 @@ def _default_map_codex_model(codex_model: str) -> str:
     """Fallback model mapping when no ModelManager is provided."""
     lower = codex_model.lower()
     if "mini" in lower:
-        return "zai-org/GLM-4.5"  # same default as Config.small_model
-    return "zai-org/GLM-4.5"  # same default as Config.big_model
+        return "moonshotai/Kimi-K3"  # same default as Config.small_model
+    return "moonshotai/Kimi-K3"  # same default as Config.big_model
 
 
 # ---------------------------------------------------------------------------

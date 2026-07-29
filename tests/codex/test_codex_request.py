@@ -229,8 +229,8 @@ def test_map_reasoning_effort(effort, expected):
 # Model mapping fallback
 # ---------------------------------------------------------------------------
 def test_default_map_mini():
-    # Fallback mapping: mini -> small_model -> "zai-org/GLM-4.5" (default)
-    assert _default_map_codex_model("o1-mini").lower() == "zai-org/glm-4.5"
+    # Fallback mapping: mini -> small_model -> "moonshotai/Kimi-K3" (default)
+    assert _default_map_codex_model("o1-mini").lower() == "moonshotai/kimi-k3"
 
 
 def test_default_map_gpt():
@@ -246,7 +246,7 @@ def test_string_input():
     """(1) String input becomes a single user message."""
     request = _make_request(model="gpt-4", input="Hello, world!")
     result = convert_responses_to_openai_chat(request)
-    assert result["model"] == "zai-org/GLM-4.5"
+    assert result["model"] == "moonshotai/Kimi-K3"
     assert result["messages"] == [{"role": "user", "content": "Hello, world!"}]
     assert result["stream"] is False
 
@@ -440,12 +440,12 @@ def test_model_mapping_no_manager():
     """(8 cont'd) No model_manager -> fallback mapping kicks in."""
     request = _make_request(model="gpt-4")
     result = convert_responses_to_openai_chat(request)
-    # default fallback -> GLM-4.5
-    assert result["model"] == "zai-org/GLM-4.5"
+    # default fallback -> Kimi-K3
+    assert result["model"] == "moonshotai/Kimi-K3"
 
     request_mini = _make_request(model="o1-mini")
     result_mini = convert_responses_to_openai_chat(request_mini)
-    assert "mini" in result_mini["model"].lower() or "glm" in result_mini["model"].lower()
+    assert "mini" in result_mini["model"].lower() or "kimi" in result_mini["model"].lower()
 
 
 # ---------------------------------------------------------------------------

@@ -59,10 +59,10 @@ class Config:
         self.model_prices_json = os.environ.get("MODEL_PRICES_JSON", "{}")
 
         # Model settings - BIG and SMALL models
-        self.big_model = os.environ.get("BIG_MODEL", "zai-org/GLM-4.5")
+        self.big_model = os.environ.get("BIG_MODEL", "moonshotai/Kimi-K3")
         self.middle_model = os.environ.get("MIDDLE_MODEL", self.big_model)
-        self.small_model = os.environ.get("SMALL_MODEL", "zai-org/GLM-4.5")
-        self.vision_model = os.environ.get("VISION_MODEL", "Qwen/Qwen2.5-VL-72B-Instruct")
+        self.small_model = os.environ.get("SMALL_MODEL", "moonshotai/Kimi-K3")
+        self.vision_model = os.environ.get("VISION_MODEL", "moonshotai/Kimi-K2.6")
 
         # Force how thinking text is returned, overriding the client `display`
         # and the per-mode default. "" = honor the request (adaptive->omitted,

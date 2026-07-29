@@ -41,10 +41,10 @@ Core environment variables:
 ```bash
 OPENAI_API_KEY=<nebius-key>
 OPENAI_BASE_URL=https://api.tokenfactory.nebius.com/v1
-BIG_MODEL=moonshotai/Kimi-K2.6
-MIDDLE_MODEL=moonshotai/Kimi-K2.6
-SMALL_MODEL=moonshotai/Kimi-K2.6
-VISION_MODEL=Qwen/Qwen2.5-VL-72B-Instruct
+BIG_MODEL=moonshotai/Kimi-K3
+MIDDLE_MODEL=moonshotai/Kimi-K3
+SMALL_MODEL=moonshotai/Kimi-K3
+VISION_MODEL=moonshotai/Kimi-K2.6
 ```
 
 ## Request Lifecycle
